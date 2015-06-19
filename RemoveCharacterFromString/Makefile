@@ -1,4 +1,4 @@
-CFLAGS=-I$(INCDIR) -O1 -Wall -Werror -std=c99
+CFLAGS=-O1 -Wall -Werror -std=c99
 
 all: build
 	./test
