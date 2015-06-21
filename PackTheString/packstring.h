@@ -6,6 +6,10 @@
 #define EOS '\0'
 #define BUFFER_SIZE 1024
 
+// Basic string compression, using the counts of repeated characters
+// String 'aaaaabbccdd' would be compressed to 'a5b2c2d2'
+// String would not be compressed if compressed string is not smaller than original one
+
 size_t calculatePackSize(const char* s)
 {
     size_t size = 0;
