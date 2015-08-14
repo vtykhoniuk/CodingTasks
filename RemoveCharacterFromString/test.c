@@ -7,6 +7,8 @@
 
 #define S1  "Vladimir"
 #define S2  "vvvvvvvv"
+#define S3  "11223344"
+#define S4  "12345678"
 
 int main()
 {
@@ -37,6 +39,14 @@ int main()
     memcpy(s, S2, N);
     trim(s, N, 'a');
     assert(strcmp(s, S2) == 0);
+
+    memcpy(s, S3, N);
+    trim_sorted(s, N);
+    assert(strncmp(s, "1234", 4) == 0);
+
+    memcpy(s, S4, N);
+    trim_sorted(s, N);
+    assert(strcmp(s, S4) == 0);
 
     printf("Tests passed\n");
     free(s);

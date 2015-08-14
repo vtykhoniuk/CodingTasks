@@ -36,4 +36,22 @@ void trimm(char* a, size_t N, const char* s)
     a[j] = '\0';
 }
 
+// Removes all dublicates from a sorted array
+void trim_sorted(char* a, size_t N)
+{
+    if (N == 0)
+        return;
+
+    int i = 0, j = 0;
+    char c = a[i];
+
+    for (; i < N; ++i) {
+        if (a[i] == c)  continue;
+        a[j++] = c;
+        c = a[i];
+    }
+
+    a[j] = c;
+}
+
 #endif // TRIM_H
