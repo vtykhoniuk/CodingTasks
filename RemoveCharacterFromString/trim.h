@@ -51,7 +51,8 @@ void trim_sorted(char* a, size_t N)
         c = a[i];
     }
 
-    a[j] = c;
+    a[j++] = c;
+    a[j] = '\0';
 }
 
 #endif // TRIM_H

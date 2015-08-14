@@ -42,7 +42,7 @@ int main()
 
     memcpy(s, S3, N);
     trim_sorted(s, N);
-    assert(strncmp(s, "1234", 4) == 0);
+    assert(strcmp(s, "1234") == 0);
 
     memcpy(s, S4, N);
     trim_sorted(s, N);
